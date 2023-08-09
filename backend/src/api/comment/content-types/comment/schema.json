@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "Comment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "man",
+        "woman",
+        "both"
+      ],
+      "default": "both"
+    },
+    "age": {
+      "type": "integer",
+      "required": true
+    },
+    "likes": {
+      "type": "biginteger"
+    },
+    "uni": {
+      "type": "enumeration",
+      "enum": [
+        "UPAO"
+      ],
+      "default": "UPAO"
+    }
+  }
+}
