@@ -15,7 +15,7 @@ function Footer() {
                             className="pb-4" 
                         />
                         <p>
-                            Estudiante Anonimo.
+                            Secretos.pro
                             <br />
                             Hecho ❤️ en Latam
                         </p>

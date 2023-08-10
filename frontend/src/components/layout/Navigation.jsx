@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import SecretSend from '../send/SecretSend'
+import SecretForm from '../send/SecretForm'
+
+
+//<Image src="/img/logo.svg" width={120} height={120}alt="Logo" />
 
 function Navigation() {
     return (
@@ -38,17 +41,12 @@ function Navigation() {
                     <div className="flex-1 ml-2">
                         <Link href="/">
                             <div className="normal-case text-xl">
-                                <Image
-                                    src="/img/logo.svg"
-                                    width={120}
-                                    height={120}
-                                    alt="Logo"
-                                />
+                                Secretos.pro
                             </div>
                         </Link>
                     </div>
                     <div className="flex-none">
-                        <SecretSend/>
+                        <SecretForm/>
                     </div>
                 </div>
             </div>
