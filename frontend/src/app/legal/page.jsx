@@ -7,7 +7,7 @@ function Legal() {
       <p className="mt-4 text-base leading-6 text-gray-900"><strong>Fecha de entrada en vigencia:</strong> 2023</p>
 
       <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Aceptación de los Términos y Condiciones</h3>
-      <p className="mt-4 text-base leading-6 text-gray-900">Estos Términos y Condiciones regulan el uso de nuestro portal de comentarios anónimos (en adelante, "el Servicio"). Al acceder y utilizar el Servicio, aceptas cumplir con estos Términos y Condiciones. Si no estás de acuerdo con alguno de los términos aquí establecidos, te rogamos que no utilices el Servicio.</p>
+      <p className="mt-4 text-base leading-6 text-gray-900">Estos Términos y Condiciones regulan el uso de nuestro portal de comentarios anónimos en adelante, el Servicio. Al acceder y utilizar el Servicio, aceptas cumplir con estos Términos y Condiciones. Si no estás de acuerdo con alguno de los términos aquí establecidos, te rogamos que no utilices el Servicio.</p>
 
       <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Uso del Servicio</h3>
       <p className="mt-4 text-base leading-6 text-gray-900">
