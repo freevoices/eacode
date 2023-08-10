@@ -49,46 +49,40 @@ function CommentList() {
                             className="bg-base-100 shadow-sm mt-4"
                         >
                             <div
-                                className={`${
-                                    gender === 'woman'
-                                        ? 'bg-pink-200'
-                                        : gender === 'man'
-                                        ? 'bg-sky-200'
-                                        : ' bg-gray-200'
-                                } flex flex-col`}
+                                className={`${gender === 'woman'
+                                    ? 'bg-pink-200 text-pink-700'
+                                    : gender === 'man'
+                                        ? 'bg-sky-200 text-sky-700'
+                                        : ' bg-gray-200 text-gray-700'
+                                    } flex flex-col`}
                             >
                                 <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
-                                    <div className="flex items-center text-gray-700">
-                                        <p>{gender}</p>
-                                        <p className="text-lg font-bold ml-1 inline mr-1">
+
+                                    <div className="flex items-center">
+                                        <p className="inline text-sm">{gender}</p>
+                                        <p className="text-lg font-bold inline mr-1 ml-1">
                                             {age}
                                         </p>
                                         <p className="inline text-sm">años</p>
                                     </div>
 
-                                    <div className="flex items-center justify-center text-gray-500">
+                                    <div className="flex items-center justify-center">
                                         <p className="font-bold text-center text-sm">
                                             @{post.id}
                                         </p>
                                     </div>
 
-                                    <div className="flex items-center justify-end text-gray-700">
+                                    <div className="flex items-center justify-end ">
                                         <button className="btn btn-ghost text-sm">
                                             {likes}
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-6 w-6"
-                                                viewBox="0 0 12 12"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 12 12">
                                                 <g fill="none">
-                                                    <path
-                                                        d="M5.41 2.515a2.39 2.39 0 0 0-3.2.213c-.95.974-.946 2.558.008 3.536L5.75 9.887c.146.15.384.15.53 0l3.513-3.602a2.548 2.548 0 0 0-.01-3.535a2.396 2.396 0 0 0-3.45-.009l-.336.345l-.34-.35a2.498 2.498 0 0 0-.246-.22zm1.638.924a1.396 1.396 0 0 1 2.018.009c.577.592.577 1.553.009 2.14l-.001.001l-3.06 3.138l-3.08-3.16a1.547 1.547 0 0 1-.008-2.141a1.394 1.394 0 0 1 2.014.009l.34.349a1 1 0 0 0 1.433 0l.335-.345z"
-                                                        fill="currentColor"
-                                                    ></path>
+                                                    <path d="M5.41 2.515a2.39 2.39 0 0 0-3.2.213c-.95.974-.946 2.558.008 3.536L5.75 9.887c.146.15.384.15.53 0l3.513-3.602a2.548 2.548 0 0 0-.01-3.535a2.396 2.396 0 0 0-3.45-.009l-.336.345l-.34-.35a2.498 2.498 0 0 0-.246-.22zm1.638.924a1.396 1.396 0 0 1 2.018.009c.577.592.577 1.553.009 2.14l-.001.001l-3.06 3.138l-3.08-3.16a1.547 1.547 0 0 1-.008-2.141a1.394 1.394 0 0 1 2.014.009l.34.349a1 1 0 0 0 1.433 0l.335-.345z" fill="currentColor"></path>
                                                 </g>
                                             </svg>
                                         </button>
                                     </div>
+
                                 </div>
                             </div>
 

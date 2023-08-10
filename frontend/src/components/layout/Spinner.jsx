@@ -1,8 +1,8 @@
 export default function Spinner() {
     return (
-        <div class="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen">
             <div role="status">
-                <span class="loading loading-bars loading-lg"></span>
+                <span className="loading loading-bars loading-lg"></span>
             </div>
         </div>
 
