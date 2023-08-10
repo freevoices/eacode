@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * comment router
+ * secret router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::comment.comment');
+module.exports = createCoreRouter('api::secret.secret');

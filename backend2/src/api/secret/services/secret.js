@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * comment service
+ * secret service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::comment.comment');
+module.exports = createCoreService('api::secret.secret');

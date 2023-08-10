@@ -1,12 +1,12 @@
 import React from 'react'
-import CommentList from '@/components/comments/CommentList'
+import SecretList from '@/components/SecretList'
 import Message from '@/components/Message'
 
 function IndexPage() {
   return (
     <>
     <Message />
-    <CommentList />
+    <SecretList />
     </>
   )
 }
