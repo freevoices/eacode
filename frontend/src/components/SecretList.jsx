@@ -19,7 +19,7 @@ async function CommentList() {
       <div>
         {comments.map(comment => (
           <div key={comment.id} className="bg-base-100 shadow-sm mt-4">
-            <div className={`bg-gray-200 flex flex-col`}>
+            <div className="bg-gray-200 flex flex-col">
               <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
 
                 <div className="flex items-center text-gray-700">
@@ -29,6 +29,7 @@ async function CommentList() {
                   </p>
                   <p className="inline text-sm">años</p>
                 </div>
+
 
                 <div className="flex items-center justify-center text-gray-500">
                   <p className="font-bold text-center text-sm">@{comment.id}</p>
