@@ -1,12 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import SecretSend from '../send/SecretSend'
 
 function Navigation() {
     return (
         <>
             <div className="bg-red-700">
-                <div className="navbar bg-red-700 mx-auto max-w-screen-md">
+                <div className="navbar bg-red-700 mx-auto max-w-screen-sm">
                     <div className="flex-none">
                         <div className="dropdown">
                             <label tabIndex="0" className="btn btn-ghost">
@@ -34,9 +35,9 @@ function Navigation() {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 ml-2">
                         <Link href="/">
-                            <div className="btn btn-ghost normal-case text-xl">
+                            <div className="normal-case text-xl">
                                 <Image
                                     src="/img/logo.svg"
                                     width={120}
@@ -47,29 +48,7 @@ function Navigation() {
                         </Link>
                     </div>
                     <div className="flex-none">
-                        <Link href="/send">
-                            <button className="btn btn-ghost">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
-                                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <g
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
-                                        <path d="M12 20l-3-3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-2l-3 3" />
-                                        <path d="M8 9h8" />
-                                        <path d="M8 13h6" />
-                                    </g>
-                                </svg>
-                                Escribir
-                            </button>
-                        </Link>
+                        <SecretSend/>
                     </div>
                 </div>
             </div>
