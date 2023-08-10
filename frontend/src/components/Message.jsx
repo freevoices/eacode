@@ -5,7 +5,7 @@ function Message() {
         <>
 
             <div>
-                <div className="bg-yellow-100 p-4 text-sm font-semibold">
+                <div className="bg-yellow-50 p-4 text-sm font-semibold text-yellow-900">
                     <p>Estás viendo secretos de los estudiantes de todo el Perú 🌎</p>
                 </div>
             </div>

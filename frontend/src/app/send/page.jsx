@@ -2,7 +2,14 @@ import React from 'react'
 
 function Send() {
   return (
-    <div>Send</div>
+    <>
+      <div className="bg-gray-100" data-theme="light">
+
+        <div className="mx-auto max-w-screen-md py-8">
+          <div div className="px-4">Send</div>
+        </div>
+      </div>
+    </>
   )
 }
 
