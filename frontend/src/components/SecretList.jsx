@@ -2,7 +2,7 @@ import React from 'react'
 
 async function loadComments() {
   const res = await fetch(
-    `http://localhost:1337/api/secrets?sort=createdAt:desc&pagination[page]=1`
+    `https://ea-backend.onrender.com/api/secrets?sort=createdAt:desc&pagination[page]=1`
   );
   const data = await res.json();
   return data.data
