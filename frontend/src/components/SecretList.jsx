@@ -1,7 +1,13 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { IoHeartOutline, IoHeart } from 'react-icons/io5'
+import {
+    IoHeartOutline,
+    IoHeart,
+    IoFemale,
+    IoMale,
+    IoMaleFemale,
+} from 'react-icons/io5'
 import Spinner from './layout/Spinner'
 
 function CommentList() {
@@ -104,7 +110,15 @@ function CommentList() {
                                 <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
                                     <div className="flex items-center">
                                         <p className="inline text-sm">
-                                            {gender}
+                                            <i className={'text-lg'}>
+                                                {gender === 'woman' ? (
+                                                    <IoFemale />
+                                                ) : gender === 'man' ? (
+                                                    <IoMale />
+                                                ) : (
+                                                    <IoMaleFemale />
+                                                )}
+                                            </i>
                                         </p>
                                         <p className="text-lg font-bold inline mr-1 ml-1">
                                             {age}
