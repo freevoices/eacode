@@ -5,13 +5,9 @@ function Send() {
     <>
       <div className="bg-gray-100" data-theme="light">
 
-        <div className="mx-auto max-w-screen-sm py-8 px-4">
+        <div className="mx-auto max-w-screen-sm py-6 px-4">
           
-          <div className="bg-yellow-50 px-4 py-3 text-sm font-base text-yellow-900 mb-4">
-            <p>Tu identidad no será revelada públicamente.</p>
-          </div>
-
-          <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight mb-8">🤫 Tu secreto</h2>
+          <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight mb-4">🤫 Tu secreto</h2>
 
           <p className="inline mr-2 font-semibold">Tengo</p>
           <input type="text inline" placeholder=" " class="input input-bordered input-sm w-12 max-w-xs" />
@@ -40,6 +36,10 @@ function Send() {
           </div>
 
           <button class="btn btn-success w-full mt-4">Enviar</button>
+
+          <div className="bg-yellow-50 px-4 py-3 text-sm font-base text-yellow-900 mt-4">
+            <p>Tu identidad nunca será revelada públicamente.</p>
+          </div>
 
         </div>
       </div>
