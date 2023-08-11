@@ -23,22 +23,22 @@ function Legal() {
 
             <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Comentarios Anónimos</h3>
             <p className="mt-4 text-base leading-6 text-gray-900">
-              Los comentarios publicados a través del Servicio serán anónimos y no se revelará la identidad del autor, a menos que dicha información se revele voluntariamente en el contenido del comentario. Estudiante Anonimo se reserva el derecho de moderar y eliminar comentarios que violen estos Términos y Condiciones o que consideremos inapropiados o perjudiciales para la comunidad.
+              Los comentarios publicados a través del Servicio serán anónimos y no se revelará la identidad del autor, a menos que dicha información se revele voluntariamente en el contenido del comentario. Secretos.pro se reserva el derecho de moderar y eliminar comentarios que violen estos Términos y Condiciones o que consideremos inapropiados o perjudiciales para la comunidad.
             </p>
 
             <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Propiedad Intelectual</h3>
             <p className="mt-4 text-base leading-6 text-gray-900">
-              Los comentarios publicados a través del Servicio seguirán siendo propiedad intelectual de sus respectivos autores. Sin embargo, al publicar un comentario, otorgas a Estudiante Anonimo una licencia no exclusiva, libre de regalías, sublicenciable y transferible para utilizar, reproducir, distribuir y mostrar dicho comentario con fines relacionados con el funcionamiento y promoción del Servicio.
+              Los comentarios publicados a través del Servicio seguirán siendo propiedad intelectual de sus respectivos autores. Sin embargo, al publicar un comentario, otorgas a Secretos.pro una licencia no exclusiva, libre de regalías, sublicenciable y transferible para utilizar, reproducir, distribuir y mostrar dicho comentario con fines relacionados con el funcionamiento y promoción del Servicio.
             </p>
 
             <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Limitación de Responsabilidad</h3>
             <p className="mt-4 text-base leading-6 text-gray-900">
-              Estudiante Anonimo no se hace responsable por el contenido publicado por los usuarios a través del Servicio. Los comentarios expresan las opiniones personales de sus autores y no representan necesariamente las opiniones de Estudiante Anonimo. En ningún caso, Estudiante Anonimo será responsable por daños directos, indirectos, incidentales, especiales o consecuentes derivados del uso o la imposibilidad de utilizar el Servicio.
+              Secretos.pro no se hace responsable por el contenido publicado por los usuarios a través del Servicio. Los comentarios expresan las opiniones personales de sus autores y no representan necesariamente las opiniones de Secretos.pro. En ningún caso, Secretos.pro será responsable por daños directos, indirectos, incidentales, especiales o consecuentes derivados del uso o la imposibilidad de utilizar el Servicio.
             </p>
 
             <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Modificaciones y Terminación</h3>
             <p className="mt-4 text-base leading-6 text-gray-900">
-              Estudiante Anonimo se reserva el derecho de modificar, suspender o descontinuar el Servicio en cualquier momento sin previo aviso. Estos Términos y Condiciones pueden ser actualizados ocasionalmente. Te recomendamos revisarlos periódicamente. El uso continuado del Servicio después de cualquier modificación constituye tu aceptación de los términos modificados.
+              Secretos.pro se reserva el derecho de modificar, suspender o descontinuar el Servicio en cualquier momento sin previo aviso. Estos Términos y Condiciones pueden ser actualizados ocasionalmente. Te recomendamos revisarlos periódicamente. El uso continuado del Servicio después de cualquier modificación constituye tu aceptación de los términos modificados.
             </p>
 
             <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Contacto</h3>
