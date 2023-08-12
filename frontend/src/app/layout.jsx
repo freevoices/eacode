@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navigation />
             {children}
+            <Analytics />
         <Footer />
       </body>
     </html>
