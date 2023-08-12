@@ -1,6 +1,7 @@
 import React from 'react'
 import SecondNav from '@/components/SecondNav'
-import SecretList from '@/components/SecretList'
+import SecretListOld from '@/app/old/SecretListOld'
+import { IoFilter } from 'react-icons/io5'
 
 function IndexPage() {
   return (
@@ -18,7 +19,7 @@ function IndexPage() {
           </div>
 
           <button className="btn mb-4 btn-success ml-2 btn-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20"><g fill="none"><path d="M12.25 13.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5h4.5zm2-4.25a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5h8.5zm2-4.25a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1 0-1.5h12.5z" fill="currentColor"></path></g></svg>
+          <IoFilter className="h-4 w-4 inline" />
             Filtros
           </button>
 
@@ -28,7 +29,7 @@ function IndexPage() {
           </div>
           
 
-          <SecretList />
+          <SecretListOld />
         </div>
       </div>
     </>

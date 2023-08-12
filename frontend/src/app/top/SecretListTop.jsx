@@ -9,7 +9,7 @@ import {
     IoTimeOutline,
     IoSchool,
 } from 'react-icons/io5';
-import Spinner from './layout/Spinner';
+import Spinner from '../../components/layout/Spinner';
 
 const API_ENDPOINT = 'https://api.secretos.pro/api/secrets';
 
@@ -84,7 +84,7 @@ function CommentList() {
     useEffect(() => {
         async function loadComments() {
             try {
-                const res = await fetch(`${API_ENDPOINT}?sort=createdAt:desc&pagination[page]=1`);
+                const res = await fetch(`${API_ENDPOINT}?sort=likes:desc&pagination[page]=1`);
                 const data = await res.json();
 
                 const newComments = {
