@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io5';
 import Spinner from './layout/Spinner';
 
-const API_ENDPOINT = 'https://ea-backend.onrender.com/api/secrets';
+const API_ENDPOINT = 'https://api.secretos.pro/api/secrets';
 
 function Comment(props) {
     const { gender, age } = props.attributes;

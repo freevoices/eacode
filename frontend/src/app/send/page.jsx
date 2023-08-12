@@ -45,7 +45,7 @@ function Send() {
 
         try {
             const res = await fetch(
-                'https://ea-backend.onrender.com/api/secrets',
+                'https://api.secretos.pro/api/secrets',
                 {
                     method: 'POST',
                     headers: {

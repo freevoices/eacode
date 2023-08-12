@@ -19,7 +19,7 @@ function CommentList() {
     useEffect(() => {
         async function loadComments() {
             const res = await fetch(
-                `https://ea-backend.onrender.com/api/secrets?sort=createdAt:desc&pagination[page]=1`
+                `https://api.secretos.pro/api/secrets?sort=createdAt:desc&pagination[page]=1`
             )
             const data = await res.json()
 
