@@ -80,6 +80,8 @@ function Send() {
                         placeholder="18"
                         className="input input-bordered input-sm w-16 max-w-xs"
                         name="age"
+                        min="13" 
+                        max="99"
                         onChange={handleFormInfo}
                         required
                     />
