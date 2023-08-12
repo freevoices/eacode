@@ -32,7 +32,7 @@ function Navigation() {
                     <div className="flex-1 ml-2">
                         <Link href="/">
                             <div className="normal-case text-xl">
-                                Secretos.pro
+                                <Image src="/img/logo.svg" width={150} height={150}alt="Logo" />
                             </div>
                         </Link>
                     </div>
