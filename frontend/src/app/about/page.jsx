@@ -6,7 +6,7 @@ function About() {
       <div className="bg-gray-100" data-theme="light">
 
         <div className="mx-auto max-w-screen-sm py-8">
-          <div div className="px-4">
+          <div className="px-4">
             <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Sobre nosotros</h2>
             <p className="mt-4 text-base leading-6 text-gray-900">
               Bienvenido a Secretos.pro, el portal de comentarios anónimos donde los estudiantes pueden compartir sus experiencias y opiniones en el ámbito estudiantil y educativo de manera confidencial.

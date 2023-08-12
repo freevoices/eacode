@@ -1,9 +1,10 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { IoPaperPlane } from 'react-icons/io5'
 
 const initialState = {
-    gender: '',
+    gender: 'other',
     age: 0,
     message: '',
 }
@@ -17,15 +18,17 @@ const genderList = [
         value: 'woman',
         label: 'Mujer',
     },
-    {
-        value: 'other',
-        label: 'Otro',
-    },
 ]
 
 function Send() {
     const [formInfo, setFormInfo] = useState(initialState)
     const router = useRouter()
+
+    //disable buton
+    const isFormIncomplete = !(
+        formInfo.age > 0 &&
+        formInfo.message.trim().length > 0
+    )
 
     function handleFormInfo({ target }) {
         setFormInfo((prevState) => {
@@ -37,6 +40,7 @@ function Send() {
     }
 
     async function sendMessage(e, body) {
+        console.log(body)
         e.preventDefault()
 
         try {
@@ -50,11 +54,13 @@ function Send() {
                     body: JSON.stringify({ data: { ...body } }),
                 }
             )
-            router.push('/')
-            setFormInfo(initialState)
+
+            console.log(res)
         } catch (error) {
             console.log(error)
         }
+        router.push('/')
+        setFormInfo(initialState)
     }
 
     return (
@@ -70,22 +76,23 @@ function Send() {
 
                     <p className="inline mr-2 font-semibold">Tengo</p>
                     <input
-                        type="text inline"
-                        placeholder=" "
-                        class="input input-bordered input-sm w-12 max-w-xs"
+                        type="number"
+                        placeholder="18"
+                        className="input input-bordered input-sm w-16 max-w-xs"
                         name="age"
                         onChange={handleFormInfo}
+                        required
                     />
 
                     <p className="inline mr-2 ml-2 font-semibold">años y soy</p>
                     <select
                         id="gender"
                         name="gender"
-                        autoComplete="gender-name"
-                        className="input input-bordered input-sm w-50 max-w-xs"
+                        className="input input-bordered input-sm w-auto max-w-xs"
                         onChange={handleFormInfo}
+                        required
                     >
-                        <option value="">...</option>
+                        <option value="other">...</option>
                         {genderList.map(({ value, label }) => (
                             <option value={value} key={'option-' + value}>
                                 {label}
@@ -95,22 +102,20 @@ function Send() {
 
                     <div className="mt-4">
                         <textarea
-                            id="secret"
+                            id="message"
                             name="message"
                             placeholder="Tu secreto..."
-                            rows={3}
-                            className="block input input-bordered input-sm w-full h-60"
+                            className="block input input-bordered input-sm w-full h-40"
                             defaultValue={''}
                             onChange={handleFormInfo}
+                            required
                         />
                     </div>
 
-                    <input
-                        type="submit"
-                        value="Enviar"
-                        className={'btn btn-success w-full mt-4'}
-                        onClick={() => setFormInfo(initialState)}
-                    />
+                    <button className="btn btn-success w-full mt-4" type="submit" disabled={isFormIncomplete}>
+                        <IoPaperPlane className='h-5 w-5' />
+                        Enviar
+                    </button>
                     {/* <button class="btn btn-success w-full mt-4">Enviar</button> */}
 
                     <div className="bg-yellow-50 px-4 py-3 text-sm font-base text-yellow-900 mt-4">

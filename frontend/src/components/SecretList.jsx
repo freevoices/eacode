@@ -7,6 +7,7 @@ import {
     IoFemale,
     IoMale,
     IoMaleFemale,
+    IoTimeOutline,
 } from 'react-icons/io5'
 import Spinner from './layout/Spinner'
 
@@ -99,13 +100,12 @@ function CommentList() {
                             className="bg-base-100 shadow-sm mt-4"
                         >
                             <div
-                                className={`${
-                                    gender === 'woman'
+                                className={`${gender === 'woman'
                                         ? 'bg-pink-200 text-pink-700'
                                         : gender === 'man'
-                                        ? 'bg-sky-200 text-sky-700'
-                                        : ' bg-gray-200 text-gray-700'
-                                } flex flex-col`}
+                                            ? 'bg-sky-200 text-sky-700'
+                                            : ' bg-gray-200 text-gray-700'
+                                    } flex flex-col`}
                             >
                                 <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
                                     <div className="flex items-center">
@@ -155,16 +155,7 @@ function CommentList() {
 
                             <div className="flex bg-gray-50 border-b border-gray-200">
                                 <div className="w-1/2 py-2 px-4 text-xs">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-4 w-4 inline mr-1"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8s8 3.58 8 8s-3.58 8-8 8zm.5-13H11v6l5.25 3.15l.75-1.23l-4.5-2.67z"
-                                            fill="currentColor"
-                                        ></path>
-                                    </svg>
+                                    <IoTimeOutline className='inline h-4 w-4 mr-1' />
                                     hace {createdAt}
                                 </div>
                                 <div className="w-1/2 py-2 px-4 text-right text-xs">
