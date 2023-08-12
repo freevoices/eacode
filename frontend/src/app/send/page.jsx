@@ -37,6 +37,7 @@ function Send() {
     }
 
     async function sendMessage(e, body) {
+        console.log(body)
         e.preventDefault()
 
         try {
@@ -50,11 +51,13 @@ function Send() {
                     body: JSON.stringify({ data: { ...body } }),
                 }
             )
-            router.push('/')
-            setFormInfo(initialState)
+
+            console.log(res)
         } catch (error) {
             console.log(error)
         }
+        router.push('/')
+        setFormInfo(initialState)
     }
 
     return (
@@ -109,7 +112,6 @@ function Send() {
                         type="submit"
                         value="Enviar"
                         className={'btn btn-success w-full mt-4'}
-                        onClick={() => setFormInfo(initialState)}
                     />
                     {/* <button class="btn btn-success w-full mt-4">Enviar</button> */}
 
