@@ -7,7 +7,6 @@ const initialState = {
     gender: 'other',
     age: 0,
     message: '',
-    uni: 'UPAO',
 }
 
 const genderList = [
@@ -102,27 +101,6 @@ function Send() {
                             </option>
                         ))}
                     </select>
-
-                    <div className='pt-4'>
-                    <p className="inline mr-2 font-semibold">y estudio en</p>
-                    <select
-                        id="uni"
-                        name="uni"
-                        className="input input-bordered input-sm w-auto max-w-xs"
-                        onChange={handleFormInfo}
-                        required
-                    >
-                        <option value="UPAO">UPAO</option>
-                        <option value="UCV">UCV</option>
-                        <option value="UNT">UNT</option>
-                        <option value="UPN">UPN</option>
-                        <option value="PUCP">PUCP</option>
-                        <option value="UDEP">UDEP</option>
-                        <option value="UNMSM">UNMSM</option>
-                        <option value="UTEC">UTEC</option>
-                        <option value="ULIMA">ULIMA</option>
-                    </select>
-                    </div>
 
                     <div className="mt-4">
                         <textarea
