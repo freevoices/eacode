@@ -9,8 +9,8 @@ import {
     IoMaleFemale,
     IoLogoWhatsapp,
 } from 'react-icons/io5'
-import Spinner from './layout/Spinner'
-import TiempoTranscurrido from './layout/Time'
+import Spinner from '@/components/layout/Spinner'
+import TiempoTranscurrido from '@/components/layout/Time'
 
 function CommentList() {
     const [comments, setComments] = useState({ results: {}, loading: true })
