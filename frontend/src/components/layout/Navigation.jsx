@@ -39,7 +39,7 @@ function Navigation() {
                         <Link href="/send">
                             <button className="btn btn-ghost">
                                 <IoPaperPlane className='h-5 w-5' />
-                                <p className='hidden md:block'>Escribir</p>
+                                <p>Escribir</p>
                             </button>
                         </Link>
                     </div>

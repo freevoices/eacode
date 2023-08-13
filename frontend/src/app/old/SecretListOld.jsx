@@ -10,6 +10,7 @@ import {
     IoSchool,
 } from 'react-icons/io5';
 import Spinner from '../../components/layout/Spinner';
+import TiempoTranscurrido from '@/components/layout/Time';
 
 const API_ENDPOINT = 'https://api.secretos.pro/api/secrets';
 
@@ -59,8 +60,7 @@ function Comment(props) {
 
                 <div className="flex bg-gray-50 border-b border-gray-200">
                     <div className="w-1/2 py-2 px-4 text-xs">
-                        <IoTimeOutline className="inline h-4 w-4 mr-1" />
-                        hace {props.createdAt}
+                        <TiempoTranscurrido fechaApi={props.createdAt} />
                     </div>
                     <div className="w-1/2 py-2 px-4 text-right text-xs">
                         <IoSchool className="h-4 w-4 inline mr-2" />

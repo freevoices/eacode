@@ -7,11 +7,10 @@ import {
     IoFemale,
     IoMale,
     IoMaleFemale,
-    IoTimeOutline,
     IoLogoWhatsapp,
-    IoLogoFacebook,
 } from 'react-icons/io5'
 import Spinner from './layout/Spinner'
+import TiempoTranscurrido from './layout/Time'
 
 function CommentList() {
     const [comments, setComments] = useState({ results: {}, loading: true })
@@ -158,8 +157,7 @@ function CommentList() {
 
                             <div className="flex bg-gray-50 border-b border-gray-200">
                                 <div className="w-1/2 py-2 px-4 text-xs">
-                                    <IoTimeOutline className='inline h-4 w-4 mr-1' />
-                                    hace {createdAt}
+                                    <TiempoTranscurrido fechaApi={createdAt} />
                                 </div>
                                 <div className="w-1/2 py-2 pr-4 text-right text-xs">
                                     <svg
@@ -180,25 +178,22 @@ function CommentList() {
                                 <p>{message}</p>
                             </div>
 
+
+{/* pon aquí el texto que quieras 
                             <div className="flex">
 
-                                <div className="w-1/2 px-4 py-2">
+                                <div className="w-1/2 px-4 py-3">
                                     <p className='text-xs hidden'>Comentario</p>
                                 </div>
 
-                                <div className="w-1/2 px-4 py-2 flex justify-end">
-                                    <button className="btn btn-square btn-xs btn-success mr-1">
-                                        <IoLogoWhatsapp className="h-5 w-5 text-white" />
-                                    </button>
-
-                                    <button className="btn btn-square btn-xs btn-info">
-                                        <IoLogoFacebook className="h-5 w-5 text-white" />
+                                <div className="w-1/2 px-4 py-3 flex justify-end">
+                                    <button className="btn btn-square btn-xs btn-success text-white">
+                                        <IoLogoWhatsapp className="h-4 w-4" />
                                     </button>
                                 </div>
 
                             </div>
-
-
+*/}
 
                         </div>
                     )
