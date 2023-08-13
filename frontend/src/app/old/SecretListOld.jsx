@@ -26,7 +26,7 @@ function Comment(props) {
         <div className="bg-base-100 shadow-sm mt-4">
 
                 <div className={`bg-${genderClass}-200 text-${genderClass}-700 flex flex-col`}>
-                    <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
+                    <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-2">
                         <div className="flex items-center">
                             <p className="inline text-sm">
                                 <i className={'text-lg'}>{genderIcon}</i>
@@ -41,7 +41,7 @@ function Comment(props) {
 
                         <div className="flex items-center justify-end ">
                             <button
-                                className="btn btn-ghost text-sm"
+                                className="btn btn-square btn-ghost text-sm"
                                 value={props.likes}
                                 onClick={() => props.updateLikes(props.index, props.id)}>
                                 <span>{props.likeList[props.index].qty}</span>
@@ -155,22 +155,6 @@ function CommentList() {
                     updateLikes={updateLikes}
                 />
             ))}
-
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
-                <div className="mt-6 px-4">
-                    <div className="join">
-                        <button className="join-item btn">«</button>
-                        <button className="join-item btn">Página {page}</button>
-                        <button className="join-item btn">»</button>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 

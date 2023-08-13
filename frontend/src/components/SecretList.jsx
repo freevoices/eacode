@@ -8,6 +8,8 @@ import {
     IoMale,
     IoMaleFemale,
     IoTimeOutline,
+    IoLogoWhatsapp,
+    IoLogoFacebook,
 } from 'react-icons/io5'
 import Spinner from './layout/Spinner'
 
@@ -15,6 +17,8 @@ function CommentList() {
     const [comments, setComments] = useState({ results: {}, loading: true })
     const [pagination, setPagination] = useState({})
     const [likeList, setLikeList] = useState([])
+
+    const { page } = pagination
 
     useEffect(() => {
         async function loadComments() {
@@ -56,7 +60,7 @@ function CommentList() {
 
         try {
             const res = await fetch(
-                `https://ea-backend.onrender.com/api/secrets/${id}`,
+                `https://api.secretos.pro/api/secrets/${id}`,
                 {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
@@ -86,7 +90,6 @@ function CommentList() {
 
     if (!comments.loading && comments.results) {
         const posts = comments.results
-        const { page } = pagination
 
         return (
             <div>
@@ -101,13 +104,13 @@ function CommentList() {
                         >
                             <div
                                 className={`${gender === 'woman'
-                                        ? 'bg-pink-200 text-pink-700'
-                                        : gender === 'man'
-                                            ? 'bg-sky-200 text-sky-700'
-                                            : ' bg-gray-200 text-gray-700'
+                                    ? 'bg-pink-200 text-pink-700'
+                                    : gender === 'man'
+                                        ? 'bg-sky-200 text-sky-700'
+                                        : ' bg-gray-200 text-gray-700'
                                     } flex flex-col`}
                             >
-                                <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-1">
+                                <div className="grid grid-cols-3 gap-4 py-1 pl-4 pr-2">
                                     <div className="flex items-center">
                                         <p className="inline text-sm">
                                             <i className={'text-lg'}>
@@ -134,7 +137,7 @@ function CommentList() {
 
                                     <div className="flex items-center justify-end ">
                                         <button
-                                            className="btn btn-ghost text-sm"
+                                            className="btn btn-square btn-ghost text-sm"
                                             value={likeList[i].qty}
                                             onClick={() =>
                                                 updateLikes(i, post.id)
@@ -158,7 +161,7 @@ function CommentList() {
                                     <IoTimeOutline className='inline h-4 w-4 mr-1' />
                                     hace {createdAt}
                                 </div>
-                                <div className="w-1/2 py-2 px-4 text-right text-xs">
+                                <div className="w-1/2 py-2 pr-4 text-right text-xs">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="h-4 w-4 inline mr-1"
@@ -176,27 +179,30 @@ function CommentList() {
                             <div className="py-3 px-4 text-base">
                                 <p>{message}</p>
                             </div>
+
+                            <div className="flex">
+
+                                <div className="w-1/2 px-4 py-2">
+                                    <p className='text-xs hidden'>Comentario</p>
+                                </div>
+
+                                <div className="w-1/2 px-4 py-2 flex justify-end">
+                                    <button className="btn btn-square btn-xs btn-success mr-1">
+                                        <IoLogoWhatsapp className="h-5 w-5 text-white" />
+                                    </button>
+
+                                    <button className="btn btn-square btn-xs btn-info">
+                                        <IoLogoFacebook className="h-5 w-5 text-white" />
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+
                         </div>
                     )
                 })}
-
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}
-                >
-                    <div className="mt-6 px-4">
-                        <div className="join">
-                            <button className="join-item btn">«</button>
-                            <button className="join-item btn">
-                                Pagina {page}
-                            </button>
-                            <button className="join-item btn">»</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         )
     }
