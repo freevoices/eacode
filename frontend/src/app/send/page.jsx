@@ -7,7 +7,7 @@ const initialState = {
     gender: 'other',
     age: 0,
     message: '',
-    uni: 'UPAO',
+    uni: 'NONE',
 }
 
 const genderList = [
@@ -112,6 +112,7 @@ function Send() {
                         onChange={handleFormInfo}
                         required
                     >
+                        <option value="NONE">...</option>
                         <option value="UPAO">UPAO</option>
                         <option value="UCV">UCV</option>
                         <option value="UNT">UNT</option>
