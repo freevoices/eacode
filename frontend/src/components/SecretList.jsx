@@ -12,6 +12,9 @@ import {
 import Spinner from '@/components/layout/Spinner'
 import TiempoTranscurrido from '@/components/layout/Time'
 
+import apiURL from '@/utils/api';
+
+
 function CommentList() {
     const [comments, setComments] = useState({ results: {}, loading: true })
     const [pagination, setPagination] = useState({})
@@ -22,7 +25,7 @@ function CommentList() {
     useEffect(() => {
         async function loadComments() {
             const res = await fetch(
-                `https://api.secretos.pro/api/secrets?sort=createdAt:desc&pagination[page]=1`
+                `${apiURL}/secrets?sort=createdAt:desc&pagination[page]=1`
             )
             const data = await res.json()
 
@@ -59,7 +62,7 @@ function CommentList() {
 
         try {
             const res = await fetch(
-                `https://api.secretos.pro/api/secrets/${id}`,
+                `${apiURL}/secrets/${id}`,
                 {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },

@@ -3,6 +3,9 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { IoPaperPlane } from 'react-icons/io5'
 
+import apiURL from '@/utils/api';
+
+
 const initialState = {
     gender: 'other',
     age: 0,
@@ -46,7 +49,7 @@ function Send() {
 
         try {
             const res = await fetch(
-                'https://api.secretos.pro/api/secrets',
+                `${apiURL}/secrets`,
                 {
                     method: 'POST',
                     headers: {
