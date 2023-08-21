@@ -9,7 +9,7 @@ function Footer() {
     return (
         <>
             <div className="bg-neutral">
-                <footer className="footer py-8 p-4 bg-neutral text-neutral-content mx-auto max-w-screen-sm">
+                <footer className="footer pt-8 pb-20 p-4 bg-neutral text-neutral-content mx-auto max-w-screen-sm">
                     <div>
                         <Image
                             src="/img/icon.svg"

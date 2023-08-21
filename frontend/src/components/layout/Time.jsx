@@ -12,21 +12,21 @@ function TiempoTranscurrido({ fechaApi }) {
     const minutosPasados = Math.floor(diferenciaEnMilisegundos / (1000 * 60));
 
     if (minutosPasados < 60) {
-      setTiempoPasado(`Hace ${minutosPasados} minutos`);
+      setTiempoPasado(`${minutosPasados}m`);
     } else if (minutosPasados < 1440) { // Menos de 24 horas (60 minutos * 24)
       const horasPasadas = Math.floor(minutosPasados / 60);
-      setTiempoPasado(`Hace ${horasPasadas} hora${horasPasadas !== 1 ? 's' : ''}`);
+      setTiempoPasado(`${horasPasadas}h${horasPasadas !== 1 ? 'rs' : ''}`);
     } else {
       const fechaFormateada = fechaApiObj.toLocaleDateString();
-      setTiempoPasado(`Hace ${fechaFormateada}`);
+      setTiempoPasado(`${fechaFormateada}`);
     }
   }, [fechaApi]);
 
   return (
-    <div>
-      <IoTimeOutline className='inline h-4 w-4 mr-1' />
-      <p className='inline'>{tiempoPasado}</p>
-    </div>
+    <>
+      <p className='text-gray-600 ml-1.5'>•</p>
+      <p className='text-gray-600 ml-1.5'>{tiempoPasado}</p>
+    </>
   );
 }
 

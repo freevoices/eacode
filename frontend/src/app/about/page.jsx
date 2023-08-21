@@ -3,7 +3,6 @@ import React from 'react'
 function About() {
   return (
     <>
-      <div className="bg-gray-100" data-theme="light">
 
         <div className="mx-auto max-w-screen-sm py-8">
           <div className="px-4">
@@ -21,7 +20,6 @@ function About() {
           </div>
         </div>
 
-      </div>
     </>
   )
 }

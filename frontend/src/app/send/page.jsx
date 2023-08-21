@@ -7,19 +7,19 @@ import apiURL from '@/utils/api';
 
 
 const initialState = {
-    gender: 'other',
-    age: 0,
+    gender: 'Persona',
+    age: 13,
     message: '',
     uni: 'NONE',
 }
 
 const genderList = [
     {
-        value: 'man',
+        value: 'Hombre',
         label: 'Hombre',
     },
     {
-        value: 'woman',
+        value: 'Mujer',
         label: 'Mujer',
     },
 ]
@@ -69,7 +69,6 @@ function Send() {
 
     return (
         <>
-            <div className="bg-gray-100" data-theme="light">
                 <form
                     className="mx-auto max-w-screen-sm py-6 px-4"
                     onSubmit={(e) => sendMessage(e, formInfo)}
@@ -98,7 +97,7 @@ function Send() {
                         onChange={handleFormInfo}
                         required
                     >
-                        <option value="other">...</option>
+                        <option value="Persona">...</option>
                         {genderList.map(({ value, label }) => (
                             <option value={value} key={'option-' + value}>
                                 {label}
@@ -150,7 +149,6 @@ function Send() {
                         <p>Tu identidad nunca será revelada públicamente.</p>
                     </div>
                 </form>
-            </div>
         </>
     )
 }

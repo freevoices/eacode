@@ -7,7 +7,6 @@ import Filter from '@/components/layout/Filter'
 function IndexPage() {
   return (
     <>
-      <div className="bg-gray-100" data-theme="light">
         <SecondNav />
 
         <div className="mx-auto max-w-screen-sm py-4">
@@ -28,7 +27,6 @@ function IndexPage() {
 
           <SecretListTop />
         </div>
-      </div>
     </>
   )
 }

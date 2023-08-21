@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+//import Image from 'next/image'
 
 import {
-    IoMenu, IoPaperPlane,
+    IoMenu, IoPerson,
 } from 'react-icons/io5'
 
-
-//<Image src="/img/logo.svg" width={120} height={120}alt="Logo" />
+//<Image src="/img/logo.svg" width={120} height={120} alt="Logo" />
+const navigation = [
+    { name: 'Legales', href: '/legal' },
+    { name: 'Nosotros', href: '/about' },
+    //{ name: 'Nosotros', href: '/about', current: false },
+]
 
 function Navigation() {
     return (
@@ -23,23 +27,35 @@ function Navigation() {
                                 tabIndex="0"
                                 className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-52"
                             >
-                                <li><Link href="/legal">Legales</Link></li>
-                                <li><Link href="/about">Sobre nosotros</Link></li>
+
+                                {navigation.map((item) => (
+                                    <li
+                                        key={item.name}
+                                    >
+                                        <Link href={item.href}>
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                     <div className="flex-1 ml-2">
                         <Link href="/">
                             <div className="normal-case text-xl">
-                                <Image src="/img/logo.svg" width={150} height={150} alt="Logo" />
+                                <img
+                                    className="h-4 sm:h-5 w-auto"
+                                    src="/img/logo.svg"
+                                    alt="Secretos Logo"
+                                />
                             </div>
                         </Link>
                     </div>
                     <div className="flex-none">
-                        <Link href="/send">
-                            <button className="btn btn-ghost">
-                                <IoPaperPlane className='h-5 w-5' />
-                                <p>Escribir</p>
+                        <Link href="/communities">
+                            <button className="inline-flex items-center rounded-full bg-red-900 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700">
+                                <IoPerson className='h-4 sm:h-5 w-auto mr-2' />
+                                Comunidades
                             </button>
                         </Link>
                     </div>

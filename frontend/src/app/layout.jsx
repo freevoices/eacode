@@ -18,7 +18,11 @@ export default function RootLayout({ children }) {
       <GoogleAnalytics />
       <body className={inter.className}>
         <Navigation />
-        {children}
+
+        <div className="bg-gray-100" data-theme="light">
+            {children}
+        </div>
+
         <Footer />
       </body>
     </html>
