@@ -27,10 +27,10 @@ function Footer() {
                     <div>
                         <span className="footer-title">Social</span>
                         <div className="grid grid-flow-col gap-4">
-                            <a href="https://www.instagram.com/uni.secretos/" target="_blank">
+                            <a href="https://www.instagram.com/secretos.pro/" target="_blank">
                                 <IoLogoInstagram className='h-6 w-6' />
                             </a>
-                            <a href="https://www.tiktok.com/@uni.secretos" target="_blank">
+                            <a href="https://www.tiktok.com/@secretos.pro" target="_blank">
                                 <IoLogoTiktok className='h-6 w-6' />
                             </a>
                         </div>

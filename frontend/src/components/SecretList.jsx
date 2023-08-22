@@ -112,6 +112,7 @@ function CommentList() {
                                 <div className="flex items-center text-sm font-semibold">
                                     <p>{gender} de {age}</p>
                                     <p className="ml-2 text-gray-600">🎓 {uni}</p>
+                                    <p className='text-gray-600 ml-1.5 inline'>•</p>
                                     <TiempoTranscurrido fechaApi={createdAt} />
                                 </div>
                             </div>

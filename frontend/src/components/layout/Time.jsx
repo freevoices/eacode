@@ -24,8 +24,7 @@ function TiempoTranscurrido({ fechaApi }) {
 
   return (
     <>
-      <p className='text-gray-600 ml-1.5'>•</p>
-      <p className='text-gray-600 ml-1.5'>{tiempoPasado}</p>
+      <p className='text-gray-600 ml-1.5 inline'>{tiempoPasado}</p>
     </>
   );
 }

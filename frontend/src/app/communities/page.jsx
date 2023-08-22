@@ -43,18 +43,18 @@ function CommentList() {
         <div className="bg-white">
           <ul className='divide-y divide-gray-100'>
             {posts.map((post, i) => {
-              const { name, details} =
+              const { name, details, url} =
                 post.attributes
 
               return (
 
                 <li key={post.id} className="flex justify-between py-4 px-4">
                   <div className="flex min-w-0 gap-x-3">
-                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://forum.strapi.io/user_avatar/forum.strapi.io/thomasschwinn/144/10795_2.png" alt="" />
+                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={url} alt="Categorias" />
                     <div className="min-w-0 flex-auto">
                       <p className="text-base leading-6 text-gray-900 inline">s/</p>
                       <p className="text-base font-semibold leading-6 text-gray-900 inline">{name}</p>
-                      <p className="mt-1 truncate text-sm leading-5 text-gray-500">{details}</p>
+                      <p className="mt-1 text-sm leading-5 text-gray-500">{details}</p>
                     </div>
                   </div>
                 </li>
