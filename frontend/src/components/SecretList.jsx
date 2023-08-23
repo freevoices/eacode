@@ -9,6 +9,7 @@ import Spinner from '@/components/layout/Spinner'
 import TiempoTranscurrido from '@/components/layout/Time'
 import apiURL from '@/utils/api';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 
 function CommentList() {
@@ -23,7 +24,7 @@ function CommentList() {
     useEffect(() => {
         async function loadComments() {
             const res = await fetch(
-                `${apiURL}/secrets?sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=20`
+                `${apiURL}/secrets?sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=2`
             )
             const data = await res.json()
 
@@ -175,23 +176,23 @@ function CommentList() {
                 <nav>
                     <ul class="flex items-center -space-x-px h-8 text-sm">
                         <li>
-                            <a href={`/?page=${Number(currentPage) - 1}`} class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
+                            <Link href={`/?page=${Number(currentPage) - 1}`} class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
                                 <FaLessThan />
-                            </a>
+                            </Link>
                         </li>
 
                         {Array.from({length: pagination.pageCount}, (_, i) => i + 1).map((page)=> {
                             const classes = page == currentPage ? 'text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700' : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
                             return (
-                            <li>
-                                <a href={`/?page=${page}`} class={`flex items-center justify-center px-3 h-8 leading-tight  ${classes}`}>{page}</a>
+                            <li key={page}>
+                                <Link href={`/?page=${page}`} class={`flex items-center justify-center px-3 h-8 leading-tight  ${classes}`}>{page}</Link>
                             </li>
                             )
                         })}
                         <li>
-                            <a href={`/?page=${Number(currentPage) + 1}`} class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
+                            <Link href={`/?page=${Number(currentPage) + 1}`} class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
                                 <FaGreaterThan/>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
