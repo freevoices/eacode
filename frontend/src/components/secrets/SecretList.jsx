@@ -8,21 +8,26 @@ import {
     IoMale,
     IoMaleFemale,
     IoLogoWhatsapp,
+    IoTimeOutline,
 } from 'react-icons/io5'
 import Spinner from '@/components/layout/Spinner'
-import TiempoTranscurrido from '@/components/layout/Time'
+import TiempoTranscurrido from '@/components/secrets/Time'
 
-function CommentList() {
+import apiURL from '@/utils/api';
+
+function CommentList({ apiQuery }) {
     const [comments, setComments] = useState({ results: {}, loading: true })
-    const [pagination, setPagination] = useState({})
+    const [pagination, setPagination] = useState({ page: 1 })
     const [likeList, setLikeList] = useState([])
 
     const { page } = pagination
 
+    //console.log(apiQuery)
+
     useEffect(() => {
         async function loadComments() {
             const res = await fetch(
-                `https://api.secretos.pro/api/secrets?sort=createdAt:asc&pagination[page]=1`
+                `${apiURL}${apiQuery}&pagination[page]=${page}`
             )
             const data = await res.json()
 
@@ -48,7 +53,7 @@ function CommentList() {
         }
 
         loadComments()
-    }, [])
+    }, [page])
 
     async function updateLikes(index, id) {
         let selectedLike = !likeList[index].clicked
@@ -102,9 +107,9 @@ function CommentList() {
                             className="bg-base-100 shadow-sm mt-4"
                         >
                             <div
-                                className={`${gender === 'woman'
+                                className={`${gender === 'Mujer'
                                     ? 'bg-pink-200 text-pink-700'
-                                    : gender === 'man'
+                                    : gender === 'Hombre'
                                         ? 'bg-sky-200 text-sky-700'
                                         : ' bg-gray-200 text-gray-700'
                                     } flex flex-col`}
@@ -113,9 +118,9 @@ function CommentList() {
                                     <div className="flex items-center">
                                         <p className="inline text-sm">
                                             <i className={'text-lg'}>
-                                                {gender === 'woman' ? (
+                                                {gender === 'Mujer' ? (
                                                     <IoFemale />
-                                                ) : gender === 'man' ? (
+                                                ) : gender === 'Hombre' ? (
                                                     <IoMale />
                                                 ) : (
                                                     <IoMaleFemale />
@@ -156,7 +161,8 @@ function CommentList() {
                             </div>
 
                             <div className="flex bg-gray-50 border-b border-gray-200">
-                                <div className="w-1/2 py-2 px-4 text-xs">
+                                <div className="flex w-1/2 py-2 px-4 text-xs items-center">
+                                    <IoTimeOutline className='w-4 h-4' />
                                     <TiempoTranscurrido fechaApi={createdAt} />
                                 </div>
                                 <div className="w-1/2 py-2 pr-4 text-right text-xs">
@@ -179,7 +185,7 @@ function CommentList() {
                             </div>
 
 
-{/* pon aquí el texto que quieras 
+                            {/* pon aquí el texto que quieras 
                             <div className="flex">
 
                                 <div className="w-1/2 px-4 py-3">
@@ -198,6 +204,25 @@ function CommentList() {
                         </div>
                     )
                 })}
+
+                <div className='grid justify-items-center pt-6 pb-2'>
+                    <div className="join">
+                        <button
+                            className="join-item btn"
+                            onClick={() => page > 1 && setPagination({ ...pagination, page: page - 1 })}
+                        >
+                            «
+                        </button>
+                        <button className="join-item btn">Página {page}</button>
+                        <button
+                            className="join-item btn"
+                            onClick={() => page < pagination.pageCount && setPagination({ ...pagination, page: page + 1 })}
+                        >
+                            »
+                        </button>
+                    </div>
+                </div>
+
             </div>
         )
     }

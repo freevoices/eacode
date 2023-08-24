@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { IoPaperPlane } from 'react-icons/io5'
 
 import apiURL from '@/utils/api';
+import SendNav from './SendNav';
 
 
 const initialState = {
@@ -69,31 +70,18 @@ function Send() {
 
     return (
         <>
+            <SendNav />
+            <div>
                 <form
-                    className="mx-auto max-w-screen-sm py-6 px-4"
+                    className="mx-auto max-w-screen-sm py-6 px-4 text-sm"
                     onSubmit={(e) => sendMessage(e, formInfo)}
                 >
-                    <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight mb-4">
-                        🤫 Tu secreto
-                    </h2>
+                    <p className="inline mr-2 font-medium">Soy</p>
 
-                    <p className="inline mr-2 font-semibold">Tengo</p>
-                    <input
-                        type="number"
-                        placeholder="18"
-                        className="input input-bordered input-sm w-16 max-w-xs"
-                        name="age"
-                        min="13" 
-                        max="99"
-                        onChange={handleFormInfo}
-                        required
-                    />
-
-                    <p className="inline mr-2 ml-2 font-semibold">años y soy</p>
                     <select
                         id="gender"
                         name="gender"
-                        className="input input-bordered input-sm w-auto max-w-xs"
+                        className="input input-bordered input-sm w-fit max-w-xs"
                         onChange={handleFormInfo}
                         required
                     >
@@ -105,26 +93,33 @@ function Send() {
                         ))}
                     </select>
 
-                    <div className='pt-4'>
-                    <p className="inline mr-2 font-semibold">y estudio en</p>
-                    <select
-                        id="uni"
-                        name="uni"
-                        className="input input-bordered input-sm w-auto max-w-xs"
+
+                    <p className="inline mr-2 ml-2">y tengo</p>
+                    <input
+                        type="number"
+                        placeholder="18"
+                        className="input input-bordered input-sm w-fit max-w-xs"
+                        name="age"
+                        min="13"
+                        max="99"
                         onChange={handleFormInfo}
                         required
-                    >
-                        <option value="NONE">...</option>
-                        <option value="UPAO">UPAO</option>
-                        <option value="UCV">UCV</option>
-                        <option value="UNT">UNT</option>
-                        <option value="UPN">UPN</option>
-                        <option value="PUCP">PUCP</option>
-                        <option value="UDEP">UDEP</option>
-                        <option value="UNMSM">UNMSM</option>
-                        <option value="UTEC">UTEC</option>
-                        <option value="ULIMA">ULIMA</option>
-                    </select>
+                    />
+
+                    <p className="inline mr-2 ml-2">años</p>
+
+                    <div className='pt-4'>
+                        <p className="inline mr-2 font-semibold">Elige una comunidad</p>
+                        <select
+                            id="uni"
+                            name="uni"
+                            className="input input-bordered input-sm w-fit max-w-xs"
+                            onChange={handleFormInfo}
+                            required
+                        >
+                            <option value="NONE">...</option>
+                            <option value="UPAO">Chupao</option>
+                        </select>
                     </div>
 
                     <div className="mt-4">
@@ -149,6 +144,7 @@ function Send() {
                         <p>Tu identidad nunca será revelada públicamente.</p>
                     </div>
                 </form>
+            </div>
         </>
     )
 }

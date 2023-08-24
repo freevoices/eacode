@@ -1,28 +1,28 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { HiChat, HiShare } from 'react-icons/hi';
-import { FaGavel, FaHeart, FaRegHeart, FaLessThan, FaGreaterThan} from 'react-icons/fa6';
 
+import { HiChat, HiShare } from 'react-icons/hi';
+
+import { FaGavel, FaHeart, FaRegHeart } from 'react-icons/fa6';
 
 import Spinner from '@/components/layout/Spinner'
-import TiempoTranscurrido from '@/components/layout/Time'
+import TiempoTranscurrido from '@/components/secrets/Time'
+
 import apiURL from '@/utils/api';
-import { useSearchParams } from 'next/navigation';
+
 
 function CommentList() {
     const [comments, setComments] = useState({ results: {}, loading: true })
     const [pagination, setPagination] = useState({})
     const [likeList, setLikeList] = useState([])
-    const currentPage = useSearchParams().get('page') || 1
-
 
     const { page } = pagination
 
     useEffect(() => {
         async function loadComments() {
             const res = await fetch(
-                `${apiURL}/secrets?sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=20`
+                `${apiURL}/secrets?sort=createdAt:desc&pagination[page]=1`
             )
             const data = await res.json()
 
@@ -103,10 +103,10 @@ function CommentList() {
                         >
                             <div
                                 className={`${gender === 'Mujer'
-                                    ? 'bg-white text-pink-700'
+                                    ? ' text-red-800'
                                     : gender === 'Hombre'
-                                        ? 'bg-white text-sky-700'
-                                        : ' bg-white text-gray-700'
+                                        ? ' text-sky-800'
+                                        : '  text-gray-800'
                                     } flex flex-col pt-4 px-4`}
                             >
                                 <div className="flex items-center text-sm font-semibold">
@@ -170,31 +170,10 @@ function CommentList() {
                         </div>
                     )
                 })}
-                <div className='flex justify-center mt-5'>
-                <nav>
-                    <ul class="flex items-center -space-x-px h-8 text-sm">
-                        <li>
-                            <a href={`/?page=${Number(currentPage) - 1}`} class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
-                                <FaLessThan />
-                            </a>
-                        </li>
 
-                        {Array.from({length: pagination.pageCount}, (_, i) => i + 1).map((page)=> {
-                            const classes = page == currentPage ? 'text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700' : 'text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700'
-                            return (
-                            <li key={page}>
-                                <a href={`/?page=${page}`} class={`flex items-center justify-center px-3 h-8 leading-tight  ${classes}`}>{page}</a>
-                            </li>
-                            )
-                        })}
-                        <li>
-                            <a href={`/?page=${Number(currentPage) + 1}`} class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700">
-                                <FaGreaterThan/>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                </div>
+                <div></div>
+
+
             </div>
         )
     }

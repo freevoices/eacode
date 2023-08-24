@@ -2,7 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
 
 
 const inter = Inter({ subsets: ['latin'] })
