@@ -11,7 +11,7 @@ const initialState = {
     gender: 'Persona',
     age: 13,
     message: '',
-    uni: 'NONE',
+    community: 'all',
 }
 
 const genderList = [
@@ -111,14 +111,16 @@ function Send() {
                     <div className='pt-4'>
                         <p className="inline mr-2 font-semibold">Elige una comunidad</p>
                         <select
-                            id="uni"
-                            name="uni"
+                            id="community"
+                            name="community"
                             className="input input-bordered input-sm w-fit max-w-xs"
                             onChange={handleFormInfo}
                             required
                         >
-                            <option value="NONE">...</option>
-                            <option value="UPAO">Chupao</option>
+                            <option value="general">...</option>
+                            <option value="chupao">Chupao</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="sobrelaapp">SobreLaApp</option>
                         </select>
                     </div>
 

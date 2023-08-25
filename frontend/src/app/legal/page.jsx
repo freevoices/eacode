@@ -13,7 +13,7 @@ function Legal() {
 
         <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Uso del Servicio</h3>
         <p className="mt-4 text-base leading-6 text-gray-900">
-          El Servicio proporciona a los usuarios la capacidad de publicar comentarios anónimos relacionados con experiencias y opiniones en el ámbito estudiantil y educativo.
+          El Servicio proporciona a los usuarios la capacidad de publicar comentarios anónimos relacionados con experiencias y opiniones en el ámbito estudiantil, educativo o en general.
           Al utilizar el Servicio, garantizas que no divulgarás información personal identificable o confidencial en tus comentarios y que respetarás la privacidad de terceros.
           Está prohibido utilizar el Servicio para publicar contenido ilegal o que viole los derechos de terceros, incluyendo derechos de autor y marcas registradas.
         </p>
@@ -39,7 +39,7 @@ function Legal() {
         </p>
 
         <h3 className="mt-6 text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-xl sm:tracking-tight">Contacto</h3>
-        <p className="mt-4 text-base leading-6 text-gray-900">Si tienes preguntas, comentarios o preocupaciones sobre estos Términos y Condiciones, puedes contactarnos en Instagram @estudiante.anonimo</p>
+        <p className="mt-4 text-base leading-6 text-gray-900">Si tienes preguntas, comentarios o preocupaciones sobre estos Términos y Condiciones, puedes contactarnos en Instagram @secretos.pro</p>
         <p className="mt-4 text-base leading-6 text-gray-900">Al utilizar el Servicio, confirmas que has leído, entendido y aceptado estos Términos y Condiciones.</p>
 
       </div>

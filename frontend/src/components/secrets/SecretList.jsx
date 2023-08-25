@@ -13,6 +13,8 @@ import {
 import Spinner from '@/components/layout/Spinner'
 import TiempoTranscurrido from '@/components/secrets/Time'
 
+import Category from '@/components/secrets/Category'
+
 import apiURL from '@/utils/api';
 
 function CommentList({ apiQuery }) {
@@ -98,7 +100,7 @@ function CommentList({ apiQuery }) {
         return (
             <div>
                 {posts.map((post, i) => {
-                    const { gender, age, likes, createdAt, uni, message } =
+                    const { gender, age, likes, createdAt, community, message } =
                         post.attributes
 
                     return (
@@ -139,7 +141,7 @@ function CommentList({ apiQuery }) {
                                         </p>
                                     </div>
 
-                                    <div className="flex items-center justify-end ">
+                                    <div className="flex items-center justify-end">
                                         <button
                                             className="btn btn-square btn-ghost text-sm"
                                             value={likeList[i].qty}
@@ -165,18 +167,9 @@ function CommentList({ apiQuery }) {
                                     <IoTimeOutline className='w-4 h-4' />
                                     <TiempoTranscurrido fechaApi={createdAt} />
                                 </div>
-                                <div className="w-1/2 py-2 pr-4 text-right text-xs">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-4 w-4 inline mr-1"
-                                        viewBox="0 0 512 512"
-                                    >
-                                        <path
-                                            d="M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z"
-                                            fill="currentColor"
-                                        ></path>
-                                    </svg>
-                                    {uni}
+                                <div className="flex w-1/2 py-2 pr-4 justify-end text-xs">
+                                    <p>c/</p>
+                                    <p className='capitalize'>{community}</p>
                                 </div>
                             </div>
 
