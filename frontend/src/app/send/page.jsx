@@ -11,7 +11,7 @@ const initialState = {
     gender: 'Persona',
     age: 13,
     message: '',
-    community: 'all',
+    community: 'general',
 }
 
 const genderList = [
@@ -117,9 +117,11 @@ function Send() {
                             onChange={handleFormInfo}
                             required
                         >
-                            <option value="general">...</option>
+                            <option value="general">General</option>
                             <option value="chupao">Chupao</option>
                             <option value="gaming">Gaming</option>
+                            <option value="hot">Hot</option>
+                            <option value="amistad">Amistad</option>
                             <option value="sobrelaapp">SobreLaApp</option>
                         </select>
                     </div>
@@ -143,7 +145,7 @@ function Send() {
                     {/* <button class="btn btn-success w-full mt-4">Enviar</button> */}
 
                     <div className="bg-yellow-50 px-4 py-3 text-sm font-base text-yellow-900 mt-4">
-                        <p>Tu identidad nunca será revelada públicamente.</p>
+                        <p>100% anonimo</p>
                     </div>
                 </form>
             </div>

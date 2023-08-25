@@ -21,7 +21,7 @@ function Footer() {
                         <p>
                             Secretos.pro
                             <br />
-                            Hecho ❤️ en Latam
+                            Hecho ❤️ en Perú
                         </p>
                     </div>
                     <div>
