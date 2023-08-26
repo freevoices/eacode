@@ -6,6 +6,7 @@ import Spinner from '@/components/layout/Spinner'
 
 import apiURL from '@/utils/api';
 import SugerirNav from './SugerirNav';
+import Link from 'next/link';
 
 
 function CommentList() {
@@ -14,7 +15,7 @@ function CommentList() {
   useEffect(() => {
     async function loadComments() {
       const res = await fetch(
-        `${apiURL}/categories?populate=*`
+        `${apiURL}/categories`
       )
       const data = await res.json()
 
@@ -48,15 +49,17 @@ function CommentList() {
 
               return (
 
-                <li key={post.id} className="flex justify-between py-4 px-4">
+                <li key={post.id} className="flex justify-between py-4 px-4 hover:bg-slate-200">
+                  <Link href="/s/?page=gaming">
                   <div className="flex min-w-0 gap-x-3">
-                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={url} alt="Categorias" />
+                    <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={url} alt={name} />
                     <div className="min-w-0 flex-auto">
                       <p className="text-base leading-6 text-gray-900 inline">s/</p>
                       <p className="text-base font-semibold leading-6 text-gray-900 inline">{name}</p>
                       <p className="mt-1 text-sm leading-5 text-gray-500">{details}</p>
                     </div>
                   </div>
+                  </Link>
                 </li>
 
 

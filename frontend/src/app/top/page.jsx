@@ -11,7 +11,7 @@ function IndexPage() {
     <>
       <SecondNav selectNav="Top" />
 
-      <div className="mx-auto max-w-screen-sm pb-4">
+      <div className="mx-auto max-w-screen-sm">
         <SendButton />
         <Filter />
         <SecretList apiQuery="/secrets?sort=likes:desc" />

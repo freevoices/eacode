@@ -106,7 +106,7 @@ function CommentList({ apiQuery }) {
                     return (
                         <div
                             key={post.id}
-                            className="bg-base-100 shadow-sm mt-4"
+                            className="bg-base-100 shadow-sm mb-4"
                         >
                             <div
                                 className={`${gender === 'Mujer'
@@ -198,7 +198,7 @@ function CommentList({ apiQuery }) {
                     )
                 })}
 
-                <div className='grid justify-items-center pt-6 pb-2'>
+                <div className='grid justify-items-center pt-2 pb-4'>
                     <div className="join">
                         <button
                             className="join-item btn"

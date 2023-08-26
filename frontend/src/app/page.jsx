@@ -9,7 +9,7 @@ function IndexPage() {
     <>
       <SecondNav selectNav="Recientes" />
 
-      <div className="mx-auto max-w-screen-sm pb-4">
+      <div className="mx-auto max-w-screen-sm">
         <SendButton />
         <Filter />
         <SecretList apiQuery="/secrets?sort=createdAt:desc" />
