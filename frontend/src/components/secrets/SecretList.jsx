@@ -66,7 +66,7 @@ function CommentList({ apiQuery }) {
 
         try {
             const res = await fetch(
-                `https://api.secretos.pro/api/secrets/${id}`,
+                `${apiURL}/secrets/${id}`,
                 {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
